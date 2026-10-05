@@ -25,7 +25,7 @@ export async function verifyMetaSignature(
   return crypto.subtle.verify(
     "HMAC",
     key,
-    supplied,
+    supplied.buffer as ArrayBuffer,
     new TextEncoder().encode(rawBody),
   );
 }
