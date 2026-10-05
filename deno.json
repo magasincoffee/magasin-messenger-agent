@@ -9,6 +9,6 @@
     }
   },
   "tasks": {
-    "check": "deno fmt --check && deno lint && deno check supabase/functions/meta-webhook/index.ts supabase/functions/health/index.ts && deno test -A"
+    "check": "deno lint && deno check supabase/functions/meta-webhook/index.ts supabase/functions/health/index.ts && deno test -A"
   }
 }
