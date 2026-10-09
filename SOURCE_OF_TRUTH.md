@@ -1,9 +1,9 @@
 # MAGASIN Messenger Agent — SOURCE OF TRUTH
 
 > Project: `magasincoffee/magasin-messenger-agent`  
-> Architecture Generation: 1  
-> Status: IMPLEMENTED / EXTERNAL_CONFIGURATION_REQUIRED  
-> Last authoritative update: 2026-10-05
+> Architecture Generation: 2  
+> Status: EXISTING_CHANNEL_EXTERNAL_CONFIGURATION_REQUIRED / PCOM_LAUNCH_APPROVED  
+> Last authoritative update: 2026-10-09
 
 ## 0. Authority
 
@@ -104,3 +104,44 @@ Do not record their real values here.
 ## 8. Definition of done
 
 Project is production-ready only when MMSG-001 through MMSG-009 are DONE and the paired OPS Gen 5 integration boundary is deployed.
+
+## 9. Separate Facebook Page commerce launch — Owner approved 2026-10-09
+
+### 9.1 Approved decision and authority
+- Owner approved a NEW **separate Facebook Page** for plastic cups, food containers and packaging in urban Can Tho. Existing **Xưởng In Ly Magasin Cup Cần Thơ** Page remains unchanged: no renaming, repurposing, unauthorized posting, shared token, cross-Page data or account identity.
+- Working name for NEW Page: **MAGASIN CUP – Ly Nhựa & Bao Bì Cần Thơ**, subject to Owner branding approval before public release. Page ID, URL and admin grants: **NOT YET VERIFIED**.
+- Organic marketing only. **NO ads, boosting, paid budgets, unsolicited DMs, mass unsolicited comments, fabricated product claims or prices**. Schedule only reviewed content with rights-cleared real product imagery.
+- Target work period: **2026-10-10 through 2026-10-16** Asia/Ho_Chi_Minh, no safety/permission gate bypass on deadline.
+- This root SOT is sole authority for PCOM as well as legacy MMSG. Issue tracker/docs are supporting execution records, never competing authority.
+- Approved new channel architecture extends Architecture Generation to 2 without changing original MMSG live status or OPS ownership. Runtime remains Supabase Edge Functions; OPS remains canonical for products, quote and inventory. Any multi-Page routing must be scoped by verified recipient Page ID and valid per-Page credentials, default deny.
+
+### 9.2 Mandatory hard release gates
+- **G0 governance**: approved decision, root SOT task ledger, dated evidences and no impact on original printing Page.
+- **G1 Page**: authorized Meta admin creates new Page; URL/ID, ownership, correct brand/assets/contact and isolation recorded.
+- **G2 catalog**: verified real SKU/material/capacity, packaging quantity conversion, canonical price, stock availability, legal/food-contact evidence and delivery zones; unknown values => human.
+- **G3 Meta**: new Page-specific grant, app permission/advanced access where required, signature-verified inbound webhook, test of Messenger send and any comment replies within policy; old Page connection is not evidence for new Page.
+- **G4 OPS**: OPS-075 DONE on OPS SOT AND paired Generation-5 RPC deployed/applied; read actual availability, price and package conversion; duplicate callbacks create exactly one confirmed sale and reservation, never SALES_ISSUE until warehouse dispatch; explicit customer confirmation and Owner live-order go-ahead required.
+- **G5 content**: Owner-approved caption, verified claims, properly licensed real media, new Page permission before publication.
+- **G6 UAT**: controlled new Page live test inbound, out-of-stock, ambiguous quote, handoff, permission denial, duplicate replay, privacy and rollback PASS.
+- **G7 operations**: dashboard, bounded retries, dead-letter/alerts, resource limits, daily reports, final Go/No-Go.
+- **FAIL-CLOSED:** no live automatic reply or production sales order writes without all relevant green gates. Paid spend permanently disallowed under this authorization.
+- No service-role API key in browser or GitHub. No disclosure of PSIDs/customer PII in public evidence.
+
+### 9.3 PCOM seven-day task ledger (legacy MMSG-001..009 unchanged)
+| ID | Target ICT | Deliverable | Status | Issue |
+|---|---|---|---|---|
+| PCOM-001 | 2026-10-10 | Create new Page, branding/permissions, isolate existing Page (G1) | READY / META ACCESS REQUIRED | https://github.com/magasincoffee/magasin-messenger-agent/issues/2 |
+| PCOM-002 | 2026-10-11 | SKU/price/stock/food-contact and packaging reconciliation (G2) | READY / OPS DEPENDENCY | https://github.com/magasincoffee/magasin-messenger-agent/issues/3 |
+| PCOM-003 | 2026-10-12 | Messenger/comments scopes, signed webhook, routing tests (G3) | READY / META DEPENDENCY | https://github.com/magasincoffee/magasin-messenger-agent/issues/4 |
+| PCOM-004 | 2026-10-13 | Staging canonical quote/order/reservation/idempotency (G4) | PRODUCTION BLOCKED BY OPS-075+GEN5 | https://github.com/magasincoffee/magasin-messenger-agent/issues/5 |
+| PCOM-005 | 2026-10-14 | Approved organic content queue, publish only when G1/G3/G5 green | DRAFT READY / PUBLICATION LOCKED | https://github.com/magasincoffee/magasin-messenger-agent/issues/6 |
+| PCOM-006 | 2026-10-15 | Controlled Page/UAT safety suite and rollback (G6) | BLOCKED BY G1-G4 | https://github.com/magasincoffee/magasin-messenger-agent/issues/7 |
+| PCOM-007 | 2026-10-16 | Dashboard, error recovery, report and final Owner Go/No-Go (G7) | DESIGN READY / FINAL GATES PENDING | https://github.com/magasincoffee/magasin-messenger-agent/issues/8 |
+
+### 9.4 Current state and execution evidence
+- **Current task: PCOM-001**; earliest safe action: inspect Meta Page creation capability and grant readiness, prepare approved naming/brand. **Page created: NOT VERIFIED.**
+- Existing **MMSG-006/007 OWNER_REQUIRED, MMSG-008/009 BLOCKED** remain; do not promote without proof.
+- Checked OPS SOT on 2026-10-09: Architecture Generation 4 and **OPS-075 IN_PROGRESS**. Production inventory cutover and Generation-5 RPC readiness are not verified.
+- Existing Windsor Facebook Organic connected Page list includes only Magasin Coffee and Xưởng In Ly Magasin Cup Cần Thơ. It supports post creation, but that does not prove ability to create new Pages, reply to Messenger or comment.
+- For each task record sanitized evidence: commit SHA, CI/workflow run/conclusion, real Page URL if available, scoped token/permission result without secrets, stage test trace, and Owner signoff. Mark DONE only after proven checks and exact-main read-back.
+- Supporting documents: `docs/PAGE_COMMERCE_7_DAY_RUNBOOK.md`, `docs/PAGE_COMMERCE_ORGANIC_DRAFTS.md`. They are non-authoritative.
