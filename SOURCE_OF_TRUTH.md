@@ -1,9 +1,9 @@
 # MAGASIN Messenger Agent — SOURCE OF TRUTH
 
 > Project: `magasincoffee/magasin-messenger-agent`  
-> Architecture Generation: 2  
+> Architecture Generation: 3  
 > Status: EXISTING_CHANNEL_EXTERNAL_CONFIGURATION_REQUIRED / PCOM_LAUNCH_APPROVED  
-> Last authoritative update: 2026-10-09
+> Last authoritative update: 2026-10-16
 
 ## 0. Authority
 
@@ -108,16 +108,16 @@ Project is production-ready only when MMSG-001 through MMSG-009 are DONE and the
 ## 9. Separate Facebook Page commerce launch — Owner approved 2026-10-09
 
 ### 9.1 Approved decision and authority
-- Owner approved a NEW **separate Facebook Page** for plastic cups, food containers and packaging in urban Can Tho. Existing **Xưởng In Ly Magasin Cup Cần Thơ** Page remains unchanged: no renaming, repurposing, unauthorized posting, shared token, cross-Page data or account identity.
-- Working name for NEW Page: **MAGASIN CUP – Ly Nhựa & Bao Bì Cần Thơ**, subject to Owner branding approval before public release. Page ID, URL and admin grants: **NOT YET VERIFIED**.
+- Owner approved a **separate Facebook commerce Page** for plastic cups, food containers and packaging in urban Can Tho. **Owner override 2026-10-16**: use existing Page ID `197751883429694` (currently connected as **Ở Đây Có Cả Niềm Vui Và Nỗi Buồn**) and request rename instead of creating an additional Page. The existing **Xưởng In Ly Magasin Cup Cần Thơ** Page (ID `103368538518632`) remains unchanged: no renaming, repurposing, unauthorized posting, shared token, cross-Page data or account identity.
+- **Owner-approved target name (2026-10-16): MAGASIN CUP – Ly Nhựa & Bao Bì Cần Thơ**. Page ID `197751883429694` is visible under the old name in the connected Windsor.ai `facebook_organic` accounts; ownership/admin rights, public URL, rename approval, and all API scopes remain **NOT VERIFIED**. No rename is confirmed as performed.
 - Organic marketing only. **NO ads, boosting, paid budgets, unsolicited DMs, mass unsolicited comments, fabricated product claims or prices**. Schedule only reviewed content with rights-cleared real product imagery.
 - Target work period: **2026-10-10 through 2026-10-16** Asia/Ho_Chi_Minh, no safety/permission gate bypass on deadline.
 - This root SOT is sole authority for PCOM as well as legacy MMSG. Issue tracker/docs are supporting execution records, never competing authority.
-- Approved new channel architecture extends Architecture Generation to 2 without changing original MMSG live status or OPS ownership. Runtime remains Supabase Edge Functions; OPS remains canonical for products, quote and inventory. Any multi-Page routing must be scoped by verified recipient Page ID and valid per-Page credentials, default deny.
+- The 2026-10-09 new-channel architecture established Architecture Generation 2; Owner's 2026-10-16 decision to reuse and rename an existing Page advances Architecture Generation to **3** without changing original MMSG live status or OPS ownership. Runtime remains Supabase Edge Functions; OPS remains canonical for products, quote and inventory. Any multi-Page routing must be scoped by verified recipient Page ID and valid per-Page credentials, default deny.
 
 ### 9.2 Mandatory hard release gates
 - **G0 governance**: approved decision, root SOT task ledger, dated evidences and no impact on original printing Page.
-- **G1 Page**: authorized Meta admin creates new Page; URL/ID, ownership, correct brand/assets/contact and isolation recorded.
+- **G1 Page**: verify Meta Business full-control authority over Page `197751883429694`; submit/confirm name change to the Owner-approved commerce brand; record Page ID/public URL, approved identity, correct brand/assets/contact, and isolation from printing Page `103368538518632`. The rename is not complete until Meta confirms it and post-change identity is independently read back.
 - **G2 catalog**: verified real SKU/material/capacity, packaging quantity conversion, canonical price, stock availability, legal/food-contact evidence and delivery zones; unknown values => human.
 - **G3 Meta**: new Page-specific grant, app permission/advanced access where required, signature-verified inbound webhook, test of Messenger send and any comment replies within policy; old Page connection is not evidence for new Page.
 - **G4 OPS**: OPS-075 DONE on OPS SOT AND paired Generation-5 RPC deployed/applied; read actual availability, price and package conversion; duplicate callbacks create exactly one confirmed sale and reservation, never SALES_ISSUE until warehouse dispatch; explicit customer confirmation and Owner live-order go-ahead required.
@@ -130,7 +130,7 @@ Project is production-ready only when MMSG-001 through MMSG-009 are DONE and the
 ### 9.3 PCOM seven-day task ledger (legacy MMSG-001..009 unchanged)
 | ID | Target ICT | Deliverable | Status | Issue |
 |---|---|---|---|---|
-| PCOM-001 | 2026-10-10 | Create new Page, branding/permissions, isolate existing Page (G1) | READY / META ACCESS REQUIRED | https://github.com/magasincoffee/magasin-messenger-agent/issues/2 |
+| PCOM-001 | 2026-10-10 | Reuse Page 197751883429694, rename to approved commerce brand, verify full-control Meta permissions and isolate printing Page (G1) | IN_PROGRESS / META RENAME + ADMIN VERIFICATION BLOCKED | https://github.com/magasincoffee/magasin-messenger-agent/issues/2 |
 | PCOM-002 | 2026-10-11 | SKU/price/stock/food-contact and packaging reconciliation (G2) | READY / OPS DEPENDENCY | https://github.com/magasincoffee/magasin-messenger-agent/issues/3 |
 | PCOM-003 | 2026-10-12 | Messenger/comments scopes, signed webhook, routing tests (G3) | READY / META DEPENDENCY | https://github.com/magasincoffee/magasin-messenger-agent/issues/4 |
 | PCOM-004 | 2026-10-13 | Staging canonical quote/order/reservation/idempotency (G4) | PRODUCTION BLOCKED BY OPS-075+GEN5 | https://github.com/magasincoffee/magasin-messenger-agent/issues/5 |
@@ -139,9 +139,17 @@ Project is production-ready only when MMSG-001 through MMSG-009 are DONE and the
 | PCOM-007 | 2026-10-16 | Dashboard, error recovery, report and final Owner Go/No-Go (G7) | DESIGN READY / FINAL GATES PENDING | https://github.com/magasincoffee/magasin-messenger-agent/issues/8 |
 
 ### 9.4 Current state and execution evidence
-- **Current task: PCOM-001**; earliest safe action: inspect Meta Page creation capability and grant readiness, prepare approved naming/brand. **Page created: NOT VERIFIED.**
+- **Current task: PCOM-001**; Owner has identified existing Page ID `197751883429694` as the channel and approved rename to **MAGASIN CUP – Ly Nhựa & Bao Bì Cần Thơ**. Current source indicates **rename NOT EXECUTED/NOT VERIFIED**, **Meta full-control NOT VERIFIED**. Earliest next task: authorized Meta Business administrator to submit name-change request and verify Page access; read back exact identity/permissions before G1 becomes GREEN.
 - Existing **MMSG-006/007 OWNER_REQUIRED, MMSG-008/009 BLOCKED** remain; do not promote without proof.
 - Checked OPS SOT on 2026-10-09: Architecture Generation 4 and **OPS-075 IN_PROGRESS**. Production inventory cutover and Generation-5 RPC readiness are not verified.
-- Existing Windsor Facebook Organic connected Page list includes only Magasin Coffee and Xưởng In Ly Magasin Cup Cần Thơ. It supports post creation, but that does not prove ability to create new Pages, reply to Messenger or comment.
+- Checked 2026-10-16: Windsor `facebook_organic` accounts list Page `197751883429694` as **Ở Đây Có Cả Niềm Vui Và Nỗi Buồn**, separately from printing Page `103368538518632`. Actions for the organic connector are `create_post`, `create_photo_post`, and `upload_photo` only. Neither Page rename nor Meta full-control verification is exposed. TinyFish authenticated browser profiles list no `facebook.com` sign-in, so no authenticated browser rename was attempted. These findings are connection-visibility evidence only, not Meta permission verification.
 - For each task record sanitized evidence: commit SHA, CI/workflow run/conclusion, real Page URL if available, scoped token/permission result without secrets, stage test trace, and Owner signoff. Mark DONE only after proven checks and exact-main read-back.
 - Supporting documents: `docs/PAGE_COMMERCE_7_DAY_RUNBOOK.md`, `docs/PAGE_COMMERCE_ORGANIC_DRAFTS.md`. They are non-authoritative.
+
+### 9.5 Owner decision and execution gate — 2026-10-16
+- Owner explicitly approved: **rename existing Page ID `197751883429694` from "Ở Đây Có Cả Niềm Vui Và Nỗi Buồn" to "MAGASIN CUP – Ly Nhựa & Bao Bì Cần Thơ"**, and continue Page configuration/Meta authorization verification. Do not create another Page for PCOM-001.
+- Owner identification and Windsor connection confirm target **ID visibility only**, not full-control rights. The connected organic API has no rename/settings/permissions action; a browser with authenticated Meta administrator session is required for the identity-change request and permission read-back.
+- Meta Page rename request **PENDING**, not executed; Meta approval cannot be assumed. Page access **UNVERIFIED**, public URL **UNVERIFIED**, Meta App & webhook scopes **UNVERIFIED**. G1 remains **BLOCKED/NOT GREEN**.
+- A separate browser connection could be authorized by the Owner. Do not request passwords/tokens in chat; interactive login should occur in Meta's own secure interface. Until then, record Owner's intent only.
+- **Immediate PCOM-001 acceptance**: Page access screenshot/record confirming full control, requested name-change outcome, public URL displaying exact Page ID, confirmation all work targets `197751883429694`; printing Page `103368538518632` remains unchanged. Store evidence without credentials or private data.
+- Preserve all G2–G7 locks: organic-only, no posts without content approval, no unsolicited messaging, no automatic real replies/order writes, no paid ads, and no stock/price promises absent OPS readiness and Owner go-live authorization.
