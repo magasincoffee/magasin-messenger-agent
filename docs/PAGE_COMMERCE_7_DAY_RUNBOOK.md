@@ -2,7 +2,7 @@
 Reference authority: ../SOURCE_OF_TRUTH.md section 9. This file is not a SOT.
 
 ## D1 PCOM-001 — Meta asset
-Check Meta Business admin authority. Create a separate Page (proposed MAGASIN CUP – Ly Nhựa & Bao Bì Cần Thơ) without changing the pre-existing printing Page. Secure URL, ID and screenshots, approve name/logo/contact, verify access and Page isolation. If tools do not authorize creation, report exact owner action without inventing Page URL. G1.
+Owner override 2026-10-16: **REUSE existing Page ID 197751883429694**, currently shown in Windsor as **Ở Đây Có Cả Niềm Vui Và Nỗi Buồn**. Owner approved changing its name to **MAGASIN CUP – Ly Nhựa & Bao Bì Cần Thơ**; do **NOT** create another Page. An authorized Meta admin must verify full control and submit the Page rename, then record Meta decision, public Page URL, Page access screen, current live display name and Page-ID read-back. Do not modify printing Page ID 103368538518632. If authenticated Meta admin browser access is unavailable, report G1 BLOCKED, not renamed. G1.
 
 ## D2 PCOM-002 — Commercial truth
 Record actual OPS SKU, cups, lids, containers, material and lid fit, carton/bag/piece conversion, canonical price tier, available inventory and sync time. Check food-contact supplier evidence for every specific claim; do not infer that all plastics are approved for all uses. Confirm OPS-075 cutover state and Gen5 RPC state. Unknown => human. G2.
@@ -23,13 +23,13 @@ Use Owner-controlled test conversation: cup 700 ml, two cartons, correct lid SKU
 Owner view shows Page metadata, webhook health, pending Messenger and comments, stale SKU data, abandoned/hand-off chats, content approvals, error queue and staging orders. Bounded retries/dead letter, secure secret handling, CPU/RAM limits for local robots, alerts, escalation and final Go/No-Go. G7.
 
 ## Evidence register (fill only with verified results)
-- New Page ID / URL: UNVERIFIED
-- Owner brand identity assets: PENDING
-- Meta scopes and webhook subscriptions for new Page: PENDING
+- Commerce Page ID: 197751883429694 identified in Windsor account list; public URL and full-control rights NOT VERIFIED; name change approved by Owner but NOT EXECUTED/NOT VERIFIED
+- Owner-approved commercial display name: MAGASIN CUP – Ly Nhựa & Bao Bì Cần Thơ; actual Meta Page display name STILL OLD as last seen through Windsor
+- Meta scopes/webhook subscriptions for commerce Page 197751883429694: PENDING / NOT VERIFIED
 - OPS-075 DONE and Gen5 deployed: NOT VERIFIED (OPS-075 IN_PROGRESS as of 2026-10-09)
 - Catalog/stock reconciliation: PENDING
 - UAT conversation/run IDs: PENDING
 - Live order creation switch: LOCKED, never enable from a date-based trigger
 - Paid ads: DISALLOWED
-- Organic posts published on new Page: NONE VERIFIED
+- Organic posts published to commerce Page after rename: NONE VERIFIED
 - Final production go-live authority: OWNER REQUIRED
